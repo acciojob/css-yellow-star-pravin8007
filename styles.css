@@ -1,1 +1,31 @@
 /*  your css code here. If applicable */
+ .star {
+            position : relative;
+            width: 0;
+            height: 0;
+            border-right: 30px solid transparent;
+            border-left: 30px solid transparent;
+            margin: 20px 0 50px 0;
+        }
+
+        .star::before,
+        .star::after {
+            content : "";
+            position: absolute;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-right: 20px solid transparent;
+            border-left: 20px solid transparent;
+        }
+
+        .star::before {
+            left : -30px;
+            border-bottom : 35px solid yellow;
+        }
+
+        .star::after {
+            left : 0;
+            border-top : 35px solid yellow;
+            transform : rotate(180deg);
+        }
